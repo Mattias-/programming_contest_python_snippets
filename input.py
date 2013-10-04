@@ -2,9 +2,11 @@
 import sys
 import pprint
 
+
 def main():
-     m = float_values()
-     pprint.pprint(m)
+    res = float_values()
+    pprint.pprint(res)
+
 
 def int_matrix(rows=5):
     """ Integer matrix with no spaces
@@ -22,10 +24,11 @@ Output:
 [0,0,0,0,0]]
 """
     matrix = []
-    for i in xrange(rows):
+    for _ in xrange(rows):
         r = [int(x) for x in list(sys.stdin.readline().rstrip())]
         matrix.append(r)
     return matrix
+
 
 def int_matrix_spaced(rows=5):
     """ Integer matrix with spaces
@@ -43,10 +46,11 @@ Output:
 [0,0,0,0,0]]
 """
     matrix = []
-    for i in xrange(rows):
+    for _ in xrange(rows):
         r = [int(x) for x in sys.stdin.readline().split()]
         matrix.append(r)
     return matrix
+
 
 def int_list():
     """ read line to int list
@@ -57,6 +61,7 @@ Output:
 [1,2,3,4,5]
 """
     return [int(x) for x in sys.stdin.readline().split()]
+
 
 def int_column(rows=5):
     """ read strings from many lines
@@ -71,10 +76,11 @@ Output:
 [1, 3, 4, -5000, 5]
 """
     col = []
-    for i in xrange(rows):
+    for _ in xrange(rows):
         r = int(sys.stdin.readline().rstrip())
         col.append(r)
     return col
+
 
 def int_values():
     """ read integer tuples
@@ -87,6 +93,7 @@ Output:
     (rows, cols) = [int(x) for x in sys.stdin.readline().split()]
     return (rows, cols)
 
+
 def int_single():
     """ read a single int
 Input:
@@ -98,9 +105,11 @@ Output:
     i = int(sys.stdin.readline.rstrip())
     return i
 
+
 def float_values():
     (first, second) = [float(x) for x in sys.stdin.readline().split()]
     return (first, second)
+
 
 def string_matrix(rows=5):
     """
@@ -119,10 +128,11 @@ Output:
 ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.']]
 """
     matrix = []
-    for i in xrange(rows):
+    for _ in xrange(rows):
         r = list(sys.stdin.readline().rstrip())
         matrix.append(r)
     return matrix
+
 
 def string_matrix_spaced(rows=5):
     """
@@ -141,10 +151,11 @@ Output:
  ['B', 'A', 'A', 'Y']]
 """
     matrix = []
-    for i in xrange(rows):
+    for _ in xrange(rows):
         r = sys.stdin.readline().split()
         matrix.append(r)
     return matrix
+
 
 def string_list():
     """ read strings from one line
@@ -155,6 +166,7 @@ Output:
 ['Hello', 'world', 'how', 'are', 'you']
 """
     return sys.stdin.readline().split()
+
 
 def string_column(rows=5):
     """ read strings from many lines
@@ -169,10 +181,11 @@ Output:
 ['Hello', 'world', 'how', 'are', 'you']
 """
     col = []
-    for i in xrange(rows):
+    for _ in xrange(rows):
         r = sys.stdin.readline().rstrip()
         col.append(r)
     return col
+
 
 def string_single():
     return sys.stdin.readline().rstrip()
