@@ -4,8 +4,9 @@ import pprint
 
 
 def main():
-    res = float_values()
-    pprint.pprint(res)
+    res = string_matrix_columns()
+    print res
+    #pprint.pprint(res)
 
 
 def int_matrix(rows=5):
@@ -155,6 +156,32 @@ Output:
         r = sys.stdin.readline().split()
         matrix.append(r)
     return matrix
+
+
+def string_matrix_columns(rows=5):
+    """ Columns of a non-spaced string matrix, ASCII art.
+Input:
+***
+  *
+***
+  *
+***
+
+Output:
+[['*', ' ', '*', ' ', '*'],
+ ['*', ' ', '*', ' ', '*'],
+ ['*', '*', '*', '*', '*']]
+"""
+    matrix = []
+    for _ in xrange(rows):
+        r = list(sys.stdin.readline().rstrip())
+        matrix.append(r)
+    rotated = []
+    # Assuming all rows have same length
+    for col in xrange(len(matrix[1])):
+        c_list = [matrix[row][col] for row in xrange(rows)]
+        rotated.append(c_list)
+    return rotated
 
 
 def string_list():
