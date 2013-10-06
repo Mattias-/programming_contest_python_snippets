@@ -6,7 +6,7 @@ import pprint
 def main():
     res = string_matrix_columns()
     print res
-    #pprint.pprint(res)
+    pprint.pprint(res)
 
 
 def int_matrix(rows=5):
@@ -26,8 +26,8 @@ Output:
 """
     matrix = []
     for _ in xrange(rows):
-        r = [int(x) for x in list(sys.stdin.readline().rstrip())]
-        matrix.append(r)
+        row = [int(x) for x in list(sys.stdin.readline().rstrip())]
+        matrix.append(row)
     return matrix
 
 
@@ -48,8 +48,8 @@ Output:
 """
     matrix = []
     for _ in xrange(rows):
-        r = [int(x) for x in sys.stdin.readline().split()]
-        matrix.append(r)
+        row = [int(x) for x in sys.stdin.readline().split()]
+        matrix.append(row)
     return matrix
 
 
@@ -78,8 +78,8 @@ Output:
 """
     col = []
     for _ in xrange(rows):
-        r = int(sys.stdin.readline().rstrip())
-        col.append(r)
+        row = int(sys.stdin.readline().rstrip())
+        col.append(row)
     return col
 
 
@@ -108,6 +108,7 @@ Output:
 
 
 def float_values():
+    """ Read float values to tuple """
     (first, second) = [float(x) for x in sys.stdin.readline().split()]
     return (first, second)
 
@@ -117,21 +118,21 @@ def string_matrix(rows=5):
 Input:
 ..........
 ..O....O..
-.\....../.
-..\____/..
+.*......*.
+..*____*..
 ..........
 
 Output:
 [['.', '.', '.', '.', '.', '.', '.', '.', '.', '.'],
 ['.', '.', 'O', '.', '.', '.', '.', 'O', '.', '.'],
-['.', '\\', '.', '.', '.', '.', '.', '.', '/', '.'],
-['.', '.', '\\', '_', '_', '_', '_', '/', '.', '.'],
+['.', '*', '.', '.', '.', '.', '.', '.', '*', '.'],
+['.', '.', '*', '_', '_', '_', '_', '*', '.', '.'],
 ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.']]
 """
     matrix = []
     for _ in xrange(rows):
-        r = list(sys.stdin.readline().rstrip())
-        matrix.append(r)
+        row = list(sys.stdin.readline().rstrip())
+        matrix.append(row)
     return matrix
 
 
@@ -153,8 +154,8 @@ Output:
 """
     matrix = []
     for _ in xrange(rows):
-        r = sys.stdin.readline().split()
-        matrix.append(r)
+        row = sys.stdin.readline().split()
+        matrix.append(row)
     return matrix
 
 
@@ -174,8 +175,8 @@ Output:
 """
     matrix = []
     for _ in xrange(rows):
-        r = list(sys.stdin.readline().rstrip())
-        matrix.append(r)
+        row = list(sys.stdin.readline().rstrip())
+        matrix.append(row)
     rotated = []
     # Assuming all rows have same length
     for col in xrange(len(matrix[1])):
@@ -209,12 +210,13 @@ Output:
 """
     col = []
     for _ in xrange(rows):
-        r = sys.stdin.readline().rstrip()
-        col.append(r)
+        row = sys.stdin.readline().rstrip()
+        col.append(row)
     return col
 
 
 def string_single():
+    """ A single string """
     return sys.stdin.readline().rstrip()
 
 if __name__ == '__main__':
