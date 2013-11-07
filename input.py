@@ -1,4 +1,3 @@
-
 import sys
 import pprint
 
@@ -103,7 +102,7 @@ Input:
 Output:
 -345
 """
-    i = int(sys.stdin.readline.rstrip())
+    i = int(sys.stdin.readline().rstrip())
     return i
 
 
