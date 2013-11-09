@@ -77,7 +77,7 @@ Output:
 """
     col = []
     for _ in xrange(rows):
-        row = int(sys.stdin.readline().rstrip())
+        row = int(sys.stdin.readline())
         col.append(row)
     return col
 
@@ -102,7 +102,7 @@ Input:
 Output:
 -345
 """
-    i = int(sys.stdin.readline().rstrip())
+    i = int(sys.stdin.readline())
     return i
 
 
